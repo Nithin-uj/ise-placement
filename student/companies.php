@@ -2,7 +2,7 @@
 include './function.php';
 include '../connection.php';
 if(!is_student_login()){
-
+    echo "<script>location='../index.php'</script>";
 }
 else{
     include 'header.php';

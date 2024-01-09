@@ -39,7 +39,7 @@ session_start();
         else{
           $row = mysqli_fetch_assoc($res);
           $_SESSION["email"] = $row['Email'];
-          $_SESSION["Name"] = $row['Name'];
+          $_SESSION["aname"] = $row['Name'];
           echo "<script>window.location='./admin'</script>";
         }
       }

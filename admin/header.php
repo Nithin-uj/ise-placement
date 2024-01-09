@@ -1,6 +1,6 @@
 <?php
-if(!is_student_login()){
-
+if(!is_admin_login()){
+  echo "<script>location='../index.php'</script>";
 }
 else{
 if (isset($_GET['logout'])) {
@@ -31,24 +31,26 @@ if (isset($_GET['logout'])) {
         <div class="fs-4 sw-bold m-3 my-auto">Training and Placement for Information Science and Engineering</div>
        </div>
     </div>
-    <div class="alert alert-primary m-0 p-1 px-3 text-end" role="alert">
-  <?php echo "USN : $_SESSION[USN]<br>Name : $_SESSION[Name]";?>
-</div>
+     <div class="alert alert-primary m-0 p-1 px-3 d-flex" role="alert" >
+      <div class="h2 fz-bold m-2 w-50">Organization </div>
+     <div class="d-flex" style="justify-content:right">
+      <div style="width:max-content;">
+      <div><?php echo "Name : $_SESSION[aname]"?></div>
+      <div><?php echo "Email : $_SESSION[email]";?></div>
+      </div>
+      </div>
+    </div> 
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 	  <div class="container-fluid">	    
 		  <ul class="navbar-nav me-auto order-0">
 			<li class="nav-item">
 			  <a class="nav-link active" aria-current="page" href="index.php">Home</a>
 			</li>
-			<!--<li class="nav-item">
-			  <a class="nav-link" href="#">Student Login</a>
-			</li> -->
-
-            <li class="nav-item">
-			 <a class="nav-link" href="companies.php">Recruitments</a>
+       <li class="nav-item">
+			 <a class="nav-link" href="#">Link 1</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="acompanies.php">Applied Companies</a> 
+			  <a class="nav-link" href="#">Link 2</a> 
 			</li>
             </ul>
       <a href="#" class="text-light m-2" style="text-decoration:none">Profile</a>

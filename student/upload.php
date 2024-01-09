@@ -4,7 +4,7 @@ include '../connection.php';
 // error_reporting(0);
 
 if(!is_student_login()){
-
+   echo "<script>location='../index.php'</script>";
 }
 else{
 include 'header.php';
