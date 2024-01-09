@@ -114,18 +114,20 @@ else{
             <div class="col-6 col-sm-4 col-md-4 fw-bold">Phone No : </div>
             <div class="col-6 col-sm-8 col-md-8"><?php echo "$row2[Phone_no]"?></div>
             </div>
-            <div class="text-danger mt-2">Please Input the Followwing Details</div>
+            <div class="text-danger mt-2">Please Input the Followwing Details *</div>
+            <div class="text-danger">File size should be less than 2 MB **</div>
             <div class="row g-0 text-start">
             <div class="col-6 col-sm-4 col-md-4 fw-bold">Resume/C.V. </div>
             <div class="col-6 col-sm-8 col-md-8">
-            <form name="form" method="post" action="upload.php" enctype="multipart/form-data" >
-            <input type="file" name="my_file" />
+            <form name="form" method="post" style="overflow:hidden;" action="upload.php" enctype="multipart/form-data" >
+            
+            <input type="file" required name="my_file" />
+            <input type="text" name="jid" hidden readonly value="<?php echo $row['JID']?>"/>
             </div>
             </div>
             <input type="submit" class="btn btn-success float-end" name="submit" value="Upload"/>
             </form>
 
-            
             </div>
             </div>
             </div>

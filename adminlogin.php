@@ -1,5 +1,7 @@
 <?php 
+include 'connection.php';
 include 'header.php';
+session_start();
 ?>
 <style>
     #csard{
@@ -22,7 +24,28 @@ include 'header.php';
 <form action="adminlogin.php" method="post">
     <?php
     if(isset($_POST['submit'])){
-        echo "invalid login id or pass";
+      $email = $_POST['email'];
+      $pass =  $_POST['pass'];
+      $query = "select * from admin_details where Email = '$email' and Password = '$pass'";
+      $res = mysqli_query($con,$query);
+      if($res){
+        if(mysqli_num_rows($res)<1){
+          echo "<div class='alert alert-danger p-1' role='alert'>
+          Invalid USN or Password
+        </div>
+        ";
+        $_SESSION["email"] = null;
+        }
+        else{
+          $row = mysqli_fetch_assoc($res);
+          $_SESSION["email"] = $row['Email'];
+          $_SESSION["Name"] = $row['Name'];
+          echo "<script>window.location='./admin'</script>";
+        }
+      }
+      else{
+        echo "error";
+      }
     }
     ?>
     <!--

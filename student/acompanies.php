@@ -9,6 +9,7 @@ else{
     $query = "SELECT * FROM applied join job on applied.JID = job.JID where applied.USN = '$_SESSION[USN]'";
     $res = mysqli_query($con,$query);
     if($res){
+        echo "<div class='grid m-2 d-flex flex-wrap'>";
         while($row = mysqli_fetch_assoc($res)){
             ?>
             <div class="card m-2" style="width:18rem;">
@@ -25,6 +26,7 @@ else{
         </div>
         <?php
         }
+        echo "</div>";
     }
     else{
         echo "error";

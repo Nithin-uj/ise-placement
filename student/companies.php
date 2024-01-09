@@ -27,15 +27,27 @@ else{
             <div><b>CTC in LPA : </b><?php echo $row['Salary'];?></div>
             <div>
             <?php
+            $que2 = "select * from applied where USN = '$_SESSION[USN]' and JID = '$row[JID]'";
+            $res2 = mysqli_query($con,$que2);
+            $count = mysqli_num_rows($res2);
+            //echo $count;
             $st = $row['State'];
             if($st==0){
                 echo "<span class='text-danger'>Expired</span>";
+                if($count>0){
+                        echo "<span class='text-info my-0 float-end'>Already Applied</span>";
+                    }
             }
             else if($st==1){
                 echo "<span class='text-success my-0'>Active</span>";
+                if($count<1){
                 ?>
                 <a href="jobapply.php?jid=<?php echo $row['JID']?>" class="btn btn-primary p-1 float-end">Apply</a>
                 <?php
+                }
+                else{
+                    echo "<span class='text-info my-0 float-end'>Already Applied</span>";
+                }
             }
             ?>
             </div>

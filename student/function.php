@@ -12,4 +12,8 @@ session_start();
     function logout(){
         session_destroy();
     }
+
+    function perror(){
+        echo "<div class='alert alert-danger m-2 ' role='alert'>Error Occured</div>";
+    }
 ?>
