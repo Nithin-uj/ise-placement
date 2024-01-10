@@ -9,6 +9,13 @@ else{
     $query = "SELECT * FROM applied join job on applied.JID = job.JID where applied.USN = '$_SESSION[USN]'";
     $res = mysqli_query($con,$query);
     if($res){
+        if(mysqli_num_rows($res)<1){
+
+            echo "<div style='height:250px';>";
+            echo "<div class='alert alert-warning m-2' style='height:100px' role='alert'>No Data Found ! </div>";
+            echo "</div>";
+        }
+        else{
         echo "<div class='grid m-2 d-flex flex-wrap'>";
         while($row = mysqli_fetch_assoc($res)){
             ?>
@@ -27,6 +34,7 @@ else{
         <?php
         }
         echo "</div>";
+    }
     }
     else{
         echo "error";

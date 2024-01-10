@@ -53,7 +53,7 @@ if (isset($_GET['logout'])) {
 			  <a class="nav-link" href="acompanies.php">Applied Companies</a> 
 			</li>
       </ul>
-      <a href="#" class="text-light m-2" style="text-decoration:none">Profile</a>
+      <a href="profile.php" class="text-light m-2" style="text-decoration:none">Profile</a>
       <a href="index.php?logout=true" class="text-danger ms-2" style="text-decoration:none">Log out</a>
 		</div>
 	</nav>
