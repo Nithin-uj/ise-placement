@@ -47,13 +47,41 @@ if (isset($_GET['logout'])) {
 			  <a class="nav-link active" aria-current="page" href="index.php">Home</a>
 			</li>
        <li class="nav-item">
-			 <a class="nav-link" href="#">Link 1</a>
+          <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Student
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="add_s.php">Add Student</a></li>
+              <li><a class="dropdown-item" href="view_s.php">View Students</a></li>
+              <!-- <li><a class="dropdown-item" href="edit_s.php">Edit Student</a></li> -->
+            </ul>
+          </div>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Link 2</a> 
+      <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Company
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="add_j.php">Add Job</a></li>
+              <li><a class="dropdown-item" href="view_j.php">View Jobs</a></li>
+              <!-- <li><a class="dropdown-item" href="edit_j.php">Edit Jobs</a></li> -->
+            </ul>
+          </div>
 			</li>
             </ul>
-      <a href="#" class="text-light m-2" style="text-decoration:none">Profile</a>
+      <!-- <a href="#" class="text-light m-2" style="text-decoration:none">Profile</a> -->
+      <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Admin
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="add_j.php">Add Admin</a></li>
+              <li><a class="dropdown-item" href="view_j.php">View Admins</a></li>
+              <li><a class="dropdown-item" href="mysqldb.php">Mysql Database</a></li>
+            </ul>
+          </div>
       <a href="index.php?logout=true" class="text-danger ms-2" style="text-decoration:none">Log out</a>
 		</div>
 	</nav>
