@@ -9,14 +9,19 @@ session_start();
         border-radius:4px;
         background-color:red;
     }
+    #container{
+      /* background-color: red; */
+      background-image:url(niesouth.jpg);
+    }
 </style>
-<div class="d-flex p-5" style="justify-content:center;">
+<link rel="stylesheet" href="studentlogin.css">
+<div class="d-flex p-3" id="container" style="justify-content:center;">
 
-<div class="rounded-start border-start border-top border-bottom " style="width:300px">
+<div class="rounded-start border-start border-top border-bottom" id="bleft" style="width:300px">
 <img src="companies.jpg" alt="image" width="100%"/>
 </div>
 
-<div class="card rounded-0 rounded-end" style="width:300px" id="card">
+<div class="card rounded-0 rounded-end" style="width:300px" id="bright"  id="card">
 <div class="card-header" style="text-align:center">
     Admin Login
   </div>

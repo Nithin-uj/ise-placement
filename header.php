@@ -15,12 +15,18 @@
        <img src="nie_logo.png" class="p-1 mb-0" alt="logo" width="80px">
        <div style="text-align: center;font-weight:bold;">ESTD : 1946</div>
        </div>
-       <div class="d-block m-2">
+       <div class="m-2" id="longtitle">
         <span class="fs-2 sw-bold m-3 my-auto">The National Institute of Engineering</span>
         <div class="fs-6 sw-bold m-3 my-auto">Autonomous Institution, Affiliated to VTU. Recognized by AICTE., Accredited by NAAC, New Delhi</div>
         <div class="fs-4 sw-bold m-3 my-auto">Training and Placement for Information Science and Engineering</div>
        </div>
+       <div class="m-2" id="shorttitle">
+        <span class="fs-2 sw-bold m-3 my-auto">NIE, MYSURU</span>
+        <!-- <div class="fs-6 sw-bold m-3 my-auto">Autonomous Institution, Affiliated to VTU. Recognized by AICTE., Accredited by NAAC, New Delhi</div> -->
+        <div class="fs-5 sw-bold m-3 my-auto">Training and Placement for Information science and Engineering</div>
+       </div>
     </div>
+    
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 	  <div class="container-fluid">	    
 		  <ul class="navbar-nav me-auto order-0">

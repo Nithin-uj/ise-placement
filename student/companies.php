@@ -11,11 +11,11 @@ else{
     if($res){
         ?>
 
-        <div class='grid m-2 d-flex flex-wrap'>
+        <div class='grid m-2 d-flex flex-wrap' style="background-image:url(./!companybg.jpg)">
             <?php
         while($row = mysqli_fetch_assoc($res)){
             ?>
-            <div class="card m-2" style="width:18rem;">
+            <div class="card m-2" style="width:20rem;">
             <div class="card-header">
             <?php echo "<b>$row[JID]  $row[Company_Name]</b>";?>
             </div>

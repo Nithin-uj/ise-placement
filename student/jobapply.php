@@ -71,7 +71,7 @@ else{
             $res2 = mysqli_query($con,$query2);
             $row2 = mysqli_fetch_assoc($res2);
             ?>
-            <div class='m-2 w-75'>
+            <div class='m-2'>
             <div class="card">
             <div class="card-header">
             Student Details
@@ -125,7 +125,7 @@ else{
             <input type="text" name="jid" hidden readonly value="<?php echo $row['JID']?>"/>
             </div>
             </div>
-            <input type="submit" class="btn btn-success float-end" name="submit" value="Upload"/>
+            <input type="submit" class="btn btn-success m-2 float-end" name="submit" value="Upload"/>
             </form>
 
             </div>

@@ -8,6 +8,7 @@ else{
     include 'header.php';
     $query = "SELECT * FROM applied join job on applied.JID = job.JID where applied.USN = '$_SESSION[USN]'";
     $res = mysqli_query($con,$query);
+    echo "<div style='background-image:url(./!companybg.jpg)''>";
     if($res){
         if(mysqli_num_rows($res)<1){
 
@@ -19,7 +20,7 @@ else{
         echo "<div class='grid m-2 d-flex flex-wrap'>";
         while($row = mysqli_fetch_assoc($res)){
             ?>
-            <div class="card m-2" style="width:18rem;">
+            <div class="card m-2" style="width:20rem;">
             <div class="card-header">
             <?php echo "<b>$row[JID]  $row[Company_Name]</b>";?>
             </div>
@@ -39,7 +40,7 @@ else{
     else{
         echo "error";
     }
-
+    echo "</div>";
     include '../footer.php';
 }
 ?>

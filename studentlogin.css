@@ -1,0 +1,11 @@
+#bright{
+    background-color: rgba(0, 0, 0, 0.37);
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+@media screen and (max-width : 425px) {
+    #bleft{
+        display: none;
+    }
+}

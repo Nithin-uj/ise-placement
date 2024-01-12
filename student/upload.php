@@ -55,33 +55,23 @@ if (($_FILES['my_file']['name']!="")){
       // echo $filename_db."<br>";
       // echo date("d-m-Y")."<br>";
       // echo date("h:i:s");
-
+      if($status){
      $flag = 0;
      $query = "INSERT INTO applied values('$_SESSION[USN]','$jid',CURRENT_DATE,CURRENT_TIME,'$filename_db')";
      $resu = mysqli_query($con,$query);
 
      if($resu){
-        $flag = 1;
-     }
-     else{
-        echo "sql error";
-        //echo mysqli_error($con);
-        // if(file_exists($path_filename_ext)) {
-        //     echo "<div class='alert alert-danger m-2' style='height:100px' role='alert'>Failed to Apply Database Error</div>";
-        //     echo $path_filename_ext;
-        // }
-     }
-
-     if($status == 1 && $flag == 1){
      //echo "Congratulations! File Uploaded Successfully.";
      echo "<div class='alert alert-success m-2' role='alert'>Applied Successfully</div>";
      echo "<div class='text-center'><a href='companies.php' class='btn btn-primary mx-2'>Click here</a></div>";
      }
      else{
-         //   echo "f = ".$flag;
-         //   echo "s = ".$status;
-         echo "<div class='alert alert-danger m-2' style='height:100px' role='alert'>Failed to Apply,<br> File size is too Large  <br>Please Try Again</div>";
+      echo "<div class='alert alert-danger m-2' style='height:100px' role='alert'>Database Error  <br>Please Try Again</div>";
      }
+   }
+   else{
+      echo "<div class='alert alert-danger m-2' style='height:100px' role='alert'>Failed to Upload c.v. Resume <br>Please Try Again</div>";
+   }
      }
      }
      echo "</div>";
