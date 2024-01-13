@@ -1,9 +1,5 @@
 <?php
-include "function.php";
-if(!is_student_login()){
-  echo "<script>location='../index.php'</script>";
-}
-else{
+include "../admin/function.php";
 if (isset($_GET['logout'])) {
   logout();
   echo "<script>location='../index.php'</script>";
@@ -86,5 +82,4 @@ if (isset($_GET['logout'])) {
 </body>
 </html>
 <?php
-}
 ?>

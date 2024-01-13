@@ -1,4 +1,5 @@
 <?php
+include "../admin/function.php";
 if(!is_admin_login()){
   echo "<script>location='../index.php'</script>";
 }
@@ -16,38 +17,18 @@ if (isset($_GET['logout'])) {
     <title>NIE Training and Placement</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./header.css"/>
     <style>
-      #nav1{
-        display: none;
+      *{
+        overflow:unset;
       }
     </style>
 </head>
 <body>   
-    <div class="d-flex m-auto" style="display:flex; justify-content:center;">
-       <!-- <img src="nie.jpg" class="m-3" alt="logo" width="400px"> -->
-       <div class="d-block m-2">
-       <img src="../nie_logo.png" class="p-1 mb-0" alt="logo" width="80px">
-       <div style="text-align: center;font-weight:bold;">ESTD : 1946</div>
-       </div>
-       <div class="d-block m-2">
-        <span class="fs-2 sw-bold m-3 my-auto">The National Institute of Engineering</span>
-        <div class="fs-6 sw-bold m-3 my-auto">Autonomous Institution, Affiliated to VTU. Recognized by AICTE., Accredited by NAAC, New Delhi</div>
-        <div class="fs-4 sw-bold m-3 my-auto">Training and Placement for Information Science and Engineering</div>
-       </div>
-    </div>
-     <div class="alert alert-primary m-0 p-1 px-3 d-flex" role="alert" >
-      <div class="h2 fz-bold m-2 w-50">Organization </div>
-     <div class="d-flex" style="justify-content:right">
-      <div style="width:max-content;">
-      <div><?php echo "Name : $_SESSION[aname]"?></div>
-      <div><?php echo "Email : $_SESSION[email]";?></div>
-      </div>
-      </div>
-    </div>
 
 
-	<nav class="navbar navbar-expand navbar-dark bg-dark" id="nav1">
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
 	  <div class="container-fluid">	    
 		  <ul class="navbar-nav me-auto order-0">
 			<li class="nav-item">
@@ -94,11 +75,9 @@ if (isset($_GET['logout'])) {
 		</div>
 	</nav>
 
+  <nav class="navbar p-2 navbar-expand-md navbar-dark bg-dark">
 
-
-<nav class="navbar p-2 navbar-expand-md navbar-dark bg-dark">
-
-<a class="navbar-item text-light me-2" style="text-decoration: none;" href="index.php">Home</a>
+<a class="navbar-item text-light m-2" style="text-decoration: none;" href="index.php">Home</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -106,8 +85,8 @@ if (isset($_GET['logout'])) {
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">  
     <ul class="navbar-nav me-auto order-0">
-     <li class="nav-item">
-     <div class="dropdown">
+    <li class="nav-item">
+          <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Student
             </button>
@@ -117,9 +96,9 @@ if (isset($_GET['logout'])) {
               <!-- <li><a class="dropdown-item" href="edit_s.php">Edit Student</a></li> -->
             </ul>
           </div>
-    </li>
-    <li class="nav-item">
-    <div class="dropdown">
+			</li>
+      <li class="nav-item">
+      <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Company
             </button>
@@ -129,10 +108,10 @@ if (isset($_GET['logout'])) {
               <!-- <li><a class="dropdown-item" href="edit_j.php">Edit Jobs</a></li> -->
             </ul>
       </div>
-    </li>
+			</li>
 
-    <span class="d-md-none">
-    <li class="nav-item">  <div class="dropdown">
+      <span class="d-md-none">
+      <div class="dropdown">
             <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Admin
             </button>
@@ -142,11 +121,11 @@ if (isset($_GET['logout'])) {
               <li><a class="dropdown-item" href="cpass.php">Change Password</a></li>
               <li><a class="dropdown-item" href="mysqldb.php">Mysql Database</a></li>
             </ul>
-    </div>
-    </li>
-    <li class="nav-item"><a href="index.php?logout=true" class="text-danger nav-link" style="text-decoration:none">Log out</a></li>
-    </span>
+          </div>
+      <li class="nav-item"><a href="index.php?logout=true" class="text-danger nav-link" style="text-decoration:none">1Log out</a></li>
+      </span>
   </ul>
+
 
   <span class="d-none d-md-flex">
   <div class="dropdown">
@@ -159,13 +138,14 @@ if (isset($_GET['logout'])) {
               <li><a class="dropdown-item" href="cpass.php">Change Password</a></li>
               <li><a class="dropdown-item" href="mysqldb.php">Mysql Database</a></li>
             </ul>
-    </div>
-  <a href="index.php?logout=true" class="text-danger nav-link align" style="text-decoration:none;display:flex;align-items:center;">Log out</a>
-  </span>
+          </div>
+          <!-- continue -->
+      <!-- <li class="nav-item"><a href="index.php?logout=true" class="text-danger nav-link" style="text-decoration:none;vertical-align:middle;">2Log out</a></li> -->
+    </span>
 
   </div>
 </nav>
-  
+
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

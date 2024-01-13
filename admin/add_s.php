@@ -25,20 +25,30 @@ else{
         }
         else{
 
-        
+        $isexist = mysqli_num_rows($result);
+        if($isexist>0){
+            echo "<div class='alert alert-danger m-2' id='alert' role='alert'>Student `$sname` already Exist with USN `$susn`</div>";
+        }
+        else{
         $que = "INSERT INTO student values ('$susn','$sname','$semail','$sbranch',$syear,$ssem,'$sdob','$scgpa',$sphno,'$dpass')";
         $res = mysqli_query($con,$que);
         if($res){
-            echo "<div class='alert alert-success m-2'>Student `$sname` Added Successfully</div>";
+            echo "<div class='alert alert-success m-2' id='alert'>Student `$sname` Added Successfully</div>";
         }
         else{
             echo "Error Occured";
         }
-
+        }
         }
     }
     ?>
-    <div class="card my-2 m-auto" style="width:400px">
+    <style>
+        #container{
+            background-image: url(companybg.jpg);
+        }
+    </style>
+    <div id="container" class="py-2">
+    <div class="card m-auto" style="width:400px">
         <div class="card-header" style="text-align:center">
             Enter Student Details
         </div>
@@ -133,6 +143,15 @@ else{
         <button type="submit" class="btn btn-success" name="submit" value="submit" style="float:right">Add Student</button>
         </form>
     </div>
+    </div>
+    <script>
+    setTimeout(() => {
+        const alertElement = document.getElementById("alert");
+        if (alertElement) {
+          alertElement.style.display = "none";
+        }
+      }, 2000);
+    </script>
     <?php
     include '../footer.php';
 }
