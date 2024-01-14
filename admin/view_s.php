@@ -27,7 +27,6 @@ else{
         td,th{
             vertical-align:middle;
         }
-
     </style>
     <div class="m-4 rounded" style="overflow:scroll;">
     

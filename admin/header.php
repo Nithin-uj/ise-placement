@@ -137,8 +137,8 @@ if (isset($_GET['logout'])) {
               Admin
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="add_j.php">Add Admin</a></li>
-              <li><a class="dropdown-item" href="view_j.php">View Admins</a></li>
+              <li><a class="dropdown-item" href="add_admin.php">Add Admin</a></li>
+              <li><a class="dropdown-item" href="view_admins.php">View Admins</a></li>
               <li><a class="dropdown-item" href="cpass.php">Change Password</a></li>
               <li><a class="dropdown-item" href="mysqldb.php">Mysql Database</a></li>
             </ul>
@@ -154,8 +154,8 @@ if (isset($_GET['logout'])) {
               Admin
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="add_j.php">Add Admin</a></li>
-              <li><a class="dropdown-item" href="view_j.php">View Admins</a></li>
+              <li><a class="dropdown-item" href="add_admin.php">Add Admin</a></li>
+              <li><a class="dropdown-item" href="view_admins.php">View Admins</a></li>
               <li><a class="dropdown-item" href="cpass.php">Change Password</a></li>
               <li><a class="dropdown-item" href="mysqldb.php">Mysql Database</a></li>
             </ul>

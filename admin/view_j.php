@@ -8,6 +8,13 @@ else{
     include 'header.php';
 
     if(isset($_GET['removejob']) and isset($_GET['jobid'])){
+
+        $query3 = "DELETE FROM applied where JID ='$_GET[jobid]'";
+        $result3 = mysqli_query($con,$query3);
+        if(!$result3){
+            perror();
+        }
+        else{
         $query2 = "DELETE FROM job where JID ='$_GET[jobid]'";
         $result2 = mysqli_query($con,$query2);
         if($result2){
@@ -16,6 +23,7 @@ else{
         else{
           echo "<div class='alert w-50 m-auto mt-2 alert-danger' id='alert' role='alert'>Failed to Remove</div>";
         }
+      }
       }
 
     $query = "SELECT * from job";
@@ -33,7 +41,7 @@ else{
             <div class="d-flex" style="align-items:center"><b>Job id : <?php echo "$row[JID]";?></b></div>
             <div class="d-flex flex-row-reverse">
             <a href="removejob.php?jid=<?php echo $row['JID'];?>" class="btn btn-outline-danger m-1">Remove</a>
-            <a href="edit_job.php?jid=<?php echo $row['JID'];?>" class="btn btn-outline-warning m-1">Edit</a>
+            <a href="edit_j.php?jid=<?php echo $row['JID'];?>" class="btn btn-outline-warning m-1">Edit</a>
             </div>
             </div>
         </div>

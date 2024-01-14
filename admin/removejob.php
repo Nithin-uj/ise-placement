@@ -4,7 +4,7 @@
 </form>
 
 <script>
-let userConfirmation = confirm("Do you want to proceed?");
+let userConfirmation = confirm("All Applied Students Data Will be Deleted \n Do you want to proceed?");
 if (userConfirmation) {
   document.getElementById('submit').click();
 } else {

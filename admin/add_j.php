@@ -32,8 +32,13 @@ else{
     }
 
     ?>
+    <style>
+    #container{
+        background-image: url(companybg.jpg);
+    }
+    </style>
     <div id="container" class="py-2">
-    <div class="card m-auto" style="width:500px">
+    <div class="card m-auto my-3" style="width:500px">
         <div class="card-header" style="text-align:center">
             Enter Job Details
         </div>
@@ -73,7 +78,7 @@ else{
         <div class="form-group row my-2">
             <label for="jd" class="col-4 col-form-label">Job Description <span class="text-danger">*</span></label>
             <div class="col-8">
-            <textarea id="largeInput" name="jd" required maxlength="65535"></textarea>
+            <textarea id="largeInput" class="form-control" name="jd" required maxlength="65535"></textarea>
             </div>
         </div>
         <div class="form-group row my-2">
@@ -99,7 +104,7 @@ else{
             </label>
             </div>
         </div>
-        <input type="submit" class="btn btn-success float-end" value="submit" name="submit">
+        <input type="submit" class="btn btn-success float-end" value="Add" name="submit">
     </div>
     <script>
     setTimeout(() => {
