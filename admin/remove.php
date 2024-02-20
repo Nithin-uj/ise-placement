@@ -4,7 +4,7 @@
 </form>
 
 <script>
-let userConfirmation = confirm("Do you want to proceed?");
+let userConfirmation = confirm("Are you sure!");
 if (userConfirmation) {
   document.getElementById('submit').click();
 } else {

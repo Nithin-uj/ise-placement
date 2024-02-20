@@ -36,7 +36,7 @@ session_start();
       if($res){
         if(mysqli_num_rows($res)<1){
           echo "<div class='alert alert-danger p-1' role='alert'>
-          Invalid USN or Password
+          Invalid Email or Password
         </div>
         ";
         $_SESSION["email"] = null;
